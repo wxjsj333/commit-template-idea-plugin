@@ -11,24 +11,24 @@ import javax.swing.*;
  */
 public class CommitDialog extends DialogWrapper {
 
-    private final CommitPanel panel;
+  private final CommitPanel panel;
 
-    CommitDialog(@Nullable Project project) {
-        super(project);
-        panel = new CommitPanel(project);
-        setTitle("Commit");
-        setOKButtonText("OK");
-        init();
-    }
+  CommitDialog(@Nullable Project project) {
+    super(project);
+    panel = new CommitPanel(project);
+    setTitle("Commit");
+    setOKButtonText("OK");
+    init();
+  }
 
-    @Nullable
-    @Override
-    protected JComponent createCenterPanel() {
-        return panel.getMainPanel();
-    }
+  @Nullable
+  @Override
+  protected JComponent createCenterPanel() {
+    return panel.getMainPanel();
+  }
 
-    CommitMessage getCommitMessage() {
-        return panel.getCommitMessage();
-    }
+  CommitMessage getCommitMessage() {
+    return panel.getCommitMessage();
+  }
 
 }
